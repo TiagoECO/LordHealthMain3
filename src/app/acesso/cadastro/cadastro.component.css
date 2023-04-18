@@ -1,0 +1,28 @@
+.card-title {
+
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+
+}
+
+.img{
+  height: 100px;
+  width: 285px;
+}
+.card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-group{
+    margin-bottom: 10px;
+}
+.btn {
+    color: #21201f;
+    background-color: #d300d3;
+}
+.card-link{
+    color: #d300d3 ;
+}
