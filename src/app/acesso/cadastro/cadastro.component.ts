@@ -51,15 +51,12 @@ export class CadastroComponent implements OnInit {
     let usuario: Usuario = new Usuario
       (this.forms.value.email,
         this.forms.value.nome_completo,
-        this.forms.value.telefone,
-        this.forms.value.cpf,
         this.forms.value.nome_usuario,
         btoa(this.forms.value.senha)
       )
 
     if (this.forms.value.email == null || this.forms.value.nome_completo == null ||
-      this.forms.value.senha == null || this.forms.value.telefone == null ||
-      this.forms.value.cpf == null || this.forms.value.nome_usuario == null) {
+      this.forms.value.senha == null || this.forms.value.nome_usuario == null) {
 
         alert ('Preencha todos os campos')
 
