@@ -12,27 +12,20 @@ export class LoginComponent implements OnInit {
   public formulario: FormGroup = new FormGroup({
     'email': new FormControl(null),
     'senha': new FormControl(null)
+  });
 
-  })
+  constructor(public autenticacao: Autenticacao) {}
 
-  constructor(private autenticacao: Autenticacao) {
-  }
+  @Output() public exibirPainel:EventEmitter<string> = new EventEmitter<string>();
 
- @Output() public exibirPainel:EventEmitter <string>= new EventEmitter <string> ();
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-
-  }
-
-  public displayRecord(){
-    this.exibirPainel.emit('cadastro')
+  public displayRecord() {
+    this.exibirPainel.emit('cadastro');
   }
 
   public authenticator(): void {
-   this.autenticacao.authenticator(this.formulario.value.email, btoa(this.formulario.value.senha))
-   .then(()=>{
-
-   })
-   .catch(err =>console.log(err))
+    this.autenticacao.authenticator(this.formulario.value.email, btoa(this.formulario.value.senha))
+      .catch(err => console.log(err));
   }
 }

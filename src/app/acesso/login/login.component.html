@@ -3,7 +3,7 @@
     <div class="card-title"><img class="img" src="../../../assets/LordHealthLogo.png" width="320" height="205" /></div>
 
     <form [formGroup]="formulario" (ngSubmit)="authenticator()">
-      <div class="form-group" >
+      <div class="form-group">
         <input
           type="email"
           class="form-control"
@@ -22,6 +22,14 @@
       <button type="submit" class="btn btn-primary btn-sm btn-block">Entrar</button>
     </form>
     <hr />
+
+    <!-- Elementos para exibir mensagens -->
+    <div *ngIf="autenticacao.exibirMensagemSucesso" class="alert alert-success mt-3" role="alert">
+      Autenticação realizada com sucesso!
+    </div>
+    <div *ngIf="autenticacao.exibirMensagemErro" class="alert alert-danger mt-3" role="alert">
+      Email ou senha incorretos!
+    </div>
   </div>
 </div>
 <br />

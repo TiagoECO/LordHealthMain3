@@ -18,8 +18,6 @@ export class CadastroComponent implements OnInit {
 
     'email': new FormControl(null),
     'nome_completo': new FormControl(null),
-    'telefone': new FormControl(null),
-    'cpf': new FormControl(null),
     'nome_usuario': new FormControl(null),
     'senha': new FormControl(null)
 
