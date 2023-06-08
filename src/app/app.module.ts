@@ -15,9 +15,10 @@ import { ProdutosComponent } from './home/produtos/produtos.component';
 import { AuthGuard } from './aut-guard.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductsComponent } from './products/products.component';
+import { ContentCardComponent } from './content-card/content-card.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
     AcessoComponent,
     LoginComponent,
@@ -25,7 +26,8 @@ import { ProductsComponent } from './products/products.component';
     HomeComponent,
     ProdutosComponent,
       NavbarComponent,
-      ProductsComponent
+      ProductsComponent,
+      ContentCardComponent
    ],
   imports: [
     BrowserModule,
