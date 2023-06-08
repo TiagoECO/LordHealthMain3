@@ -13,16 +13,20 @@ import { CadastroComponent } from './acesso/cadastro/cadastro.component';
 import { HomeComponent } from './home/home.component';
 import { ProdutosComponent } from './home/produtos/produtos.component';
 import { AuthGuard } from './aut-guard.service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     AcessoComponent,
     LoginComponent,
     CadastroComponent,
     HomeComponent,
-    ProdutosComponent
-  ],
+    ProdutosComponent,
+      NavbarComponent,
+      ProductsComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
