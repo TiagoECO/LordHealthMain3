@@ -1,3 +1,6 @@
+import { MeditacaoComponent } from './home/meditacao/meditacao.component';
+import { SonoComponent } from './home/sono/sono.component';
+import { ExerciciosComponent } from './home/exercicios/exercicios.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './acesso/cadastro/cadastro.component';
@@ -13,7 +16,10 @@ const routes: Routes = [
   // {path:'home', component: HomeComponent},
   {path: 'home', component:HomeComponent, canActivate:[AuthGuard]},// teste de bloqueio de rotas
   {path: 'login', component:LoginComponent},
-
+  {path: 'produtos', component:ProdutosComponent},
+  {path: 'exercicios', component:ExerciciosComponent},
+  {path: 'sono', component:SonoComponent},
+  {path: 'meditacao', component:MeditacaoComponent},
 ];
 
 @NgModule({
