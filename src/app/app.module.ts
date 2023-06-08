@@ -18,6 +18,9 @@ import { ProductsComponent } from './products/products.component';
 import { ExercicioCardComponent } from './acesso/cards/exercicio-card/exercicio-card.component';
 import { MeditacaoCardComponent } from './acesso/cards/meditacao-card/meditacao-card.component';
 import { SonoCardComponent } from './acesso/cards/sono-card/sono-card.component';
+import { ExerciciosComponent } from './home/exercicios/exercicios.component';
+import { SonoComponent } from './home/sono/sono.component';
+import { MeditacaoComponent } from './home/meditacao/meditacao.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { SonoCardComponent } from './acesso/cards/sono-card/sono-card.component'
       ProductsComponent,
       ExercicioCardComponent,
       MeditacaoCardComponent,
-      SonoCardComponent
+      SonoCardComponent,
+      ExerciciosComponent,
+      SonoComponent,
+      MeditacaoComponent
    ],
   imports: [
     BrowserModule,
