@@ -15,10 +15,12 @@ import { ProdutosComponent } from './home/produtos/produtos.component';
 import { AuthGuard } from './aut-guard.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductsComponent } from './products/products.component';
-import { ContentCardComponent } from './content-card/content-card.component';
+import { ExercicioCardComponent } from './acesso/cards/exercicio-card/exercicio-card.component';
+import { MeditacaoCardComponent } from './acesso/cards/meditacao-card/meditacao-card.component';
+import { SonoCardComponent } from './acesso/cards/sono-card/sono-card.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [
     AppComponent,
     AcessoComponent,
     LoginComponent,
@@ -27,7 +29,9 @@ import { ContentCardComponent } from './content-card/content-card.component';
     ProdutosComponent,
       NavbarComponent,
       ProductsComponent,
-      ContentCardComponent
+      ExercicioCardComponent,
+      MeditacaoCardComponent,
+      SonoCardComponent
    ],
   imports: [
     BrowserModule,
