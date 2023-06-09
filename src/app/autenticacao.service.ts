@@ -73,17 +73,19 @@ export class Autenticacao {
     }
 
     public autenticado() :boolean{
-        let ok :boolean = true
-        // enquanto o token o id_token estiver aramazenado no localstorage,  o sistema sabe que o usuário está logado
-        if(this.token_id === undefined&& localStorage.getItem('id_token')!=null){
-            this.token_id = localStorage.getItem('id_token')
-        }
-        // se não tiver autenticado, direciona para a rota raiz
-        if(this.token_id ===undefined){
-            this.rotas.navigate(['/']);
-        }
-        return this.token_id !==undefined
-    }
+      let ok :boolean = false
+      // enquanto o token o id_token estiver aramazenado no localstorage,  o sistema sabe que o usuário está logado
+      if(localStorage.getItem('id_token')!=null){
+          this.token_id = localStorage.getItem('id_token')
+          ok =true
+      }
+      // se não tiver autenticado, direciona para a rota raiz
+      if(this.token_id ===undefined){
+          ok = false
+          this.rotas.navigate(['/']);
+      }
+      return ok
+  }
 
 // função para deslogar, deletando o id aramazenado no localstorage e deslogando do firebase
     public sair (){
