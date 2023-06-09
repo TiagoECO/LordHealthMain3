@@ -3,7 +3,8 @@ img {
 }
 
 .btn {
-  background-color: #8C52FF;
+  background-color: #8c52ff;
+  border-color: #8c52ff;
 }
 
 .btn:active {

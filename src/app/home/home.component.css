@@ -11,8 +11,16 @@
   width: 150px;
   margin-left: 70px;
 }
+
 img {
   width: 60px;
 }
 
+.btn {
+  background-color: #8c52ff;
+  border-color: #8c52ff;
+}
 
+.btn:active {
+  background-color: #5c34aa;
+}

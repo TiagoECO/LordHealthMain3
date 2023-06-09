@@ -1,0 +1,14 @@
+.card {
+  border-width: 3px;
+  border-color: #8c52ff;
+}
+
+.btn {
+  width: 100%;
+  background-color: #8c52ff;
+  border-color: #8c52ff;
+}
+
+.btn:active {
+  background-color: #5c34aa;
+}

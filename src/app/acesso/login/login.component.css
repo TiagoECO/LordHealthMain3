@@ -22,14 +22,19 @@
 }
 
 .btn {
-  color: #21201f;
-  background-color: #d300d3;
+  color: white;
+  background-color: #8C52FF;
   margin-left: 113px;
+  border-color: #8c52ff;
+}
+
+.btn:active {
+  background-color: #5c34aa;
 }
 
 
 .card-link {
-  color: #d300d3;
+  color: #8c52ff;
 }
 
 .small text-danger {
