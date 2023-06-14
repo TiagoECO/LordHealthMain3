@@ -52,7 +52,6 @@ export class Autenticacao {
       });
   }
 
-    // deleta usuário do banco de dados
     public async DeletarUsuarioBD(email: string): Promise<any> {
         const deletar = firebase.database().ref(`usuario_detalhe/${btoa(email)}`);
         try {
@@ -62,7 +61,7 @@ export class Autenticacao {
             console.log(err);
         }
     }
-    //esta função só funcionará se o usuário estiver autenticado e deleta apenas do sistema de autenticação
+
     public desativarConta(): void {
         firebase.auth().currentUser?.delete()
             .then(() => {
@@ -74,12 +73,10 @@ export class Autenticacao {
 
     public autenticado() :boolean{
       let ok :boolean = false
-      // enquanto o token o id_token estiver aramazenado no localstorage,  o sistema sabe que o usuário está logado
       if(localStorage.getItem('id_token')!=null){
           this.token_id = localStorage.getItem('id_token')
           ok =true
       }
-      // se não tiver autenticado, direciona para a rota raiz
       if(this.token_id ===undefined){
           ok = false
           this.rotas.navigate(['/']);
@@ -87,7 +84,6 @@ export class Autenticacao {
       return ok
   }
 
-// função para deslogar, deletando o id aramazenado no localstorage e deslogando do firebase
     public sair (){
         firebase.auth().signOut()
       .then(() => {

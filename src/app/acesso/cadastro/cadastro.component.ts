@@ -13,25 +13,17 @@ import { Autenticacao } from 'src/app/autenticacao.service';
 })
 export class CadastroComponent implements OnInit {
 
-  //atributo contralador dos inputs no HTML
   forms: FormGroup = new FormGroup({
 
     'email': new FormControl(null),
     'nome_completo': new FormControl(null),
     'nome_usuario': new FormControl(null),
     'senha': new FormControl(null)
-
   })
 
+  constructor(private autenticacao: Autenticacao) {}
 
-  // instanciando o serviço de autenticação
-  constructor(private autenticacao: Autenticacao) {
-
-  }
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   // serve para disparar eventos para o component pai
   @Output() public exibirpainel: EventEmitter<string> = new EventEmitter<string>()
@@ -42,10 +34,6 @@ export class CadastroComponent implements OnInit {
 
   // função acionada no click e que serve para enviar os dados ao serviço, seguindo a lógica do model
   CadastrarUsuario(): void {
-    // alert('Funcionando')
-
-    //const senhaCriptografada = bcrypt.hashSync(this.formulario.value.senha, 10);
-
     let usuario: Usuario = new Usuario
       (this.forms.value.email,
         this.forms.value.nome_completo,
@@ -55,9 +43,7 @@ export class CadastroComponent implements OnInit {
 
     if (this.forms.value.email == null || this.forms.value.nome_completo == null ||
       this.forms.value.senha == null || this.forms.value.nome_usuario == null) {
-
         alert ('Preencha todos os campos')
-
     }
     else{
       this.autenticacao.CadastrarUser(usuario)
@@ -65,13 +51,6 @@ export class CadastroComponent implements OnInit {
         this.exibirlogin()
       })
       .catch(err => console.log(err));
-
     }
-
-
-
   }
-
-
-
 }

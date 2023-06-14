@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: '', component:AcessoComponent},
   {path: 'cadastro', component: CadastroComponent},
   // {path:'home', component: HomeComponent},
-  {path: 'home', component:HomeComponent, canActivate:[AuthGuard]},// teste de bloqueio de rotas
+  {path: 'home', component:HomeComponent, canActivate:[AuthGuard]},//bloqueio de rotas
   {path: 'login', component:LoginComponent},
   {path: 'produtos', component:ProdutosComponent},
   {path: 'exercicios', component:ExerciciosComponent},

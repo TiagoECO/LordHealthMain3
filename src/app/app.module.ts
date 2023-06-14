@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { ReactiveFormsModule } from '@angular/forms'; // para controlar os formularios
+import { ReactiveFormsModule } from '@angular/forms';
 import { Autenticacao } from './autenticacao.service';
 
 import { AppRoutingModule } from './app-routing.module';
