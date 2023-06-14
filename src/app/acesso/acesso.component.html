@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="container-fluid d-flex justify-content-center align-items-center">
   <div class="row">
-    <div class="col d-flex justify-content-center align-items-center">
+    <div class="col">
       <div *ngIf="cadastro; else FormLogin">
         <app-cadastro (exibirpainel)="exibirpainel($event)"></app-cadastro>
       </div>
